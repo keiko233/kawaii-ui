@@ -28,6 +28,10 @@ const ButtonProps = {
     type: String as PropType<string>,
     values: buttonSizes,
     default: 'md'
+  },
+  round: {
+    type: Boolean as PropType<boolean>,
+    default: false
   }
 };
 
@@ -37,7 +41,8 @@ const KButton = defineComponent({
   setup(props, { slots }: SetupContext) {
     const classString = classNames(
       `k-button-type-${props.type}`,
-      `k-button-size-${props.size}`
+      `k-button-size-${props.size}`,
+      props.round ? 'k-button-round' : ''
     );
     return () => (
       <button class={classString}>
