@@ -1,26 +1,80 @@
-.box {
-  background: linear-gradient(45deg, #ff7d7d 25%, #ff4b4b 0, #ff4b4b 50%, #ff7d7d 0, #ff7d7d 75%, #ff4b4b 0);
+.k-button(@color: #ff4b4b) {
+  @colot-light: lighten(@color, 10%);
+  @color-light-transparent: fade(@colot-light, 50%);
+  @color-light-transparent-active: fade(lighten(@color, 15%), 80%);
+
+  background: linear-gradient(
+    45deg, 
+    @colot-light 25%, 
+    @color 0, 
+    @color 50%, 
+    @colot-light 0, 
+    @colot-light 75%, 
+    @color 0);
   background-size: 48px 48px;
-  padding: 12px 18px;
   border-radius: 10px;
   color: #fff;
-  border: #fff4f4bd solid 3px;
+  border: #ffffffa3 solid 3px;
   box-shadow: 2px 2px 0 #fff4f4 ;
   transition: all 0.3s;
-  font-size: 16px;
-  min-width: 48px;
   text-align: center;
 
   &:hover {
     background-size: 32px 32px;
     box-shadow: none;
     border: #ffffffc7 solid 3px;
-    filter: drop-shadow(0 0 8px #ff7d7d85);
+    filter: drop-shadow(0 0 8px @color-light-transparent);
   }
 
   &:active {
     transform: scale(0.8);
-    border: #ff7d7d solid 3px;
-    filter: drop-shadow(0 0 8px #ff9898e1);
+    border: @colot-light solid 3px;
+    filter: drop-shadow(0 0 8px @color-light-transparent-active);
   }
+}
+
+.k-button-size-md {
+  padding: 12px 18px;
+  font-size: 16px;
+  min-width: 48px;
+}
+
+.k-button-size-lg {
+  padding: 16px 28px;
+  font-size: 16px;
+  min-width: 56px;
+}
+
+.k-button-size-sm {
+  padding: 8px 12px;
+  font-size: 16px;
+  min-width: 36px;
+}
+
+.k-button-type-default {
+  .k-button();
+}
+
+.k-button-type-primary {
+  .k-button(#4ba3ff);
+}
+
+.k-button-type-success {
+  .k-button(#0abb66);
+}
+
+.k-button-type-warning {
+  .k-button(#e82f2f);
+}
+
+.k-button-type-info {
+  .k-button(#c43700);
+}
+
+.k-button-type-danger {
+  .k-button(#e49100);
+}
+
+.k-button-type-text {
+  .k-button(#b1b1b1);
 }

@@ -1,7 +1,13 @@
 
 <template>
   <div class="container d-flex-c">
-    <KButton>Button</KButton>
+    <KButton type="default">Default</KButton>
+    <KButton type="primary">Primary</KButton>
+    <KButton type="success">Success</KButton>
+    <KButton type="warning">Warning</KButton>
+    <KButton type="info">Info</KButton>
+    <KButton type="danger">Danger</KButton>
+    <KButton type="text">Text</KButton>
   </div>
 </template>
 
@@ -18,7 +24,7 @@ import KButton from './components/Button/index'
 
 .d-flex-c {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
