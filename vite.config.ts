@@ -6,4 +6,19 @@ export default defineConfig({
   plugins: [
     vue()
   ],
+  build:{
+    lib:{
+      entry:'./packages/index.ts',
+      name:'Kawaii-UI',
+      formats:['es','umd']
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
+  }
 })
