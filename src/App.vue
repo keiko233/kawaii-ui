@@ -2,7 +2,6 @@
 <template>
   <div class="container d-flex-c">
     <div>
-      <KButton type="default">Default</KButton>
       <KButton type="primary">Primary</KButton>
       <KButton type="success">Success</KButton>
       <KButton type="warning">Warning</KButton>
@@ -11,7 +10,6 @@
       <KButton type="text">Text</KButton>
     </div>
     <div>
-      <KButton size="sm" type="default">Default</KButton>
       <KButton size="sm" type="primary">Primary</KButton>
       <KButton size="sm" type="success">Success</KButton>
       <KButton size="sm" type="warning">Warning</KButton>
@@ -20,7 +18,6 @@
       <KButton size="sm" type="text">Text</KButton>
     </div>
     <div>
-      <KButton size="lg" type="default">Default</KButton>
       <KButton size="lg" type="primary">Primary</KButton>
       <KButton size="lg" type="success">Success</KButton>
       <KButton size="lg" type="warning">Warning</KButton>
@@ -29,7 +26,6 @@
       <KButton size="lg" type="text">Text</KButton>
     </div>
     <div>
-      <KButton round type="default">Default</KButton>
       <KButton round type="primary">Primary</KButton>
       <KButton round type="success">Success</KButton>
       <KButton round type="warning">Warning</KButton>
@@ -41,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import KButton from './components/Button/index'
+import KButton from './components/Button/index.vue'
 
 </script>
 

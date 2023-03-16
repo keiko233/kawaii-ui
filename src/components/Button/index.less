@@ -1,4 +1,4 @@
-.k-button(@color: #ff4b4b) {
+.k-button(@color: #4ba3ff) {
   @colot-light: lighten(@color, 10%);
   @color-light-transparent: fade(@colot-light, 50%);
   @color-light-transparent-active: fade(lighten(@color, 15%), 80%);
@@ -55,12 +55,8 @@
   min-width: 36px;
 }
 
-.k-button-type-default {
-  .k-button();
-}
-
 .k-button-type-primary {
-  .k-button(#4ba3ff);
+  .k-button();
 }
 
 .k-button-type-success {
@@ -72,7 +68,7 @@
 }
 
 .k-button-type-info {
-  .k-button(#c43700);
+  .k-button(#ff4b4b);
 }
 
 .k-button-type-danger {
