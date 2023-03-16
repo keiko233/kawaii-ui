@@ -7,8 +7,7 @@
     "components"
   ],
   "author": "keiko233",
-  "main": "./dist/kawaii-ui.umd.js",
-  "module": "./dist/kawaii-ui.mjs",
+  "main": "packages/index.ts",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vue-tsc && vite build",
