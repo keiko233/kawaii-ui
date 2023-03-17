@@ -1,7 +1,9 @@
 <template>
-  <button :class="classString">
-    <slot />
-  </button>
+  <a>
+    <button :class="classString">
+      <slot />
+    </button>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -9,7 +11,7 @@ import { PropType } from 'vue';
 import classNames from '../../utils/classNames';
 
 const props = defineProps({
-  type: { 
+  type: {
     type: String as PropType<string>,
     default: 'default'
   },
