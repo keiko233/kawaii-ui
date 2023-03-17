@@ -1,0 +1,1 @@
+export { default as KCard } from './index.vue';
