@@ -1,6 +1,6 @@
 <template>
   <div>
-    <KButton type="primary">Primary</KButton>
+    <KButton>Primary</KButton>
     <KButton type="success">Success</KButton>
     <KButton type="warning">Warning</KButton>
     <KButton type="info">Info</KButton>

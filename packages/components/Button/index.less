@@ -1,16 +1,11 @@
-.k-button(@color: #4ba3ff) {
-  @colot-light: lighten(@color, 10%);
-  @color-light-transparent: fade(@colot-light, 50%);
+@import '../../assets/style.less';
+
+.k-button(@color) {
+  @color-light: lighten(@color, 10%);
+  @color-light-transparent: fade(@color-light, 50%);
   @color-light-transparent-active: fade(lighten(@color, 15%), 80%);
 
-  background: linear-gradient(45deg,
-      @colot-light 25%,
-      @color 0,
-      @color 50%,
-      @colot-light 0,
-      @colot-light 75%,
-      @color 0);
-  background-size: 48px 48px;
+  background-color: @color;
   border-radius: 10px;
   color: #fff;
   border: #ffffffa3 solid 3px;
@@ -19,7 +14,6 @@
   text-align: center;
 
   &:hover {
-    background-size: 32px 32px;
     box-shadow: none;
     border: #ffffffc7 solid 3px;
     filter: drop-shadow(0 0 8px @color-light-transparent);
@@ -27,8 +21,25 @@
 
   &:active {
     transform: scale(0.8);
-    border: @colot-light solid 3px;
+    border: @color-light solid 3px;
     filter: drop-shadow(0 0 8px @color-light-transparent-active);
+  }
+}
+
+.k-button-stripe(@color) {
+  @color-light: lighten(@color, 10%);
+
+  background: linear-gradient(45deg,
+      @color-light 25%,
+      @color 0,
+      @color 50%,
+      @color-light 0,
+      @color-light 75%,
+      @color 0);
+  background-size: 48px 48px;
+
+  &:hover {
+    background-size: 32px 32px;
   }
 }
 
@@ -55,25 +66,49 @@
 }
 
 .k-button-type-primary {
-  .k-button();
+  .k-button(@k-color-primary);
 }
 
 .k-button-type-success {
-  .k-button(#0abb66);
+  .k-button(@k-color-success);
 }
 
 .k-button-type-warning {
-  .k-button(#e82f2f);
+  .k-button(@k-color-warning);
 }
 
 .k-button-type-info {
-  .k-button(#ff4b4b);
+  .k-button(@k-color-info);
 }
 
 .k-button-type-danger {
-  .k-button(#e49100);
+  .k-button(@k-color-danger);
 }
 
 .k-button-type-text {
-  .k-button(#b1b1b1);
+  .k-button(@k-color-text);
+}
+
+.k-button-stripe-primary {
+  .k-button-stripe(@k-color-primary);
+}
+
+.k-button-stripe-success {
+  .k-button-stripe(@k-color-success);
+}
+
+.k-button-stripe-warning {
+  .k-button-stripe(@k-color-warning);
+}
+
+.k-button-stripe-info {
+  .k-button-stripe(@k-color-info);
+}
+
+.k-button-stripe-danger {
+  .k-button-stripe(@k-color-danger);
+}
+
+.k-button-stripe-text {
+  .k-button-stripe(@k-color-text);
 }

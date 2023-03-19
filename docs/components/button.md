@@ -1,8 +1,6 @@
 <script setup>
-import ButtonMd from './demo/Button/ButtonMd.vue'
-import ButtonSm from './demo/Button/ButtonSm.vue'
-import ButtonLg from './demo/Button/ButtonLg.vue'
-import ButtonRound from './demo/Button/ButtonRound.vue'
+import Button from './demo/Button/Button.vue'
+import ButtonCustom from './demo/Button/ButtonCustom.vue'
 </script>
 
 # Button
@@ -12,37 +10,23 @@ It can be clicked, it can be used, it looks good, and the animation is elegant.
 ## Button Default
 
 <DemoContainer>
-  <ButtonMd/>
+  <Button/>
 </DemoContainer>
 
-<<< @/components/demo/Button/ButtonMd.vue
+<<< @/components/demo/Button/Button.vue
 
-## Button Size
+## Button Props
 
 <DemoContainer>
-  <ButtonSm/>
+  <ButtonCustom/>
 </DemoContainer>
 
-<<< @/components/demo/Button/ButtonSm.vue
-
-<DemoContainer>
-  <ButtonLg/>
-</DemoContainer>
-
-<<< @/components/demo/Button/ButtonLg.vue
-
-## Button Round
-
-<DemoContainer>
-  <ButtonRound/>
-</DemoContainer>
-
-<<< @/components/demo/Button/ButtonRound.vue
+<<< @/components/demo/Button/ButtonCustom.vue
 
 ### Properties
 
-| Name  | Type    | Default | Description                                   |
-| ----- | ------- | ------- | --------------------------------------------- |
-| type  | string  | primary | primary, success, warning, info, danger, text |
-| size  | string  | md      | sm, md, lg                                    |
-| round | boolean | false   | true, false                                   |
+| Name  | Type    | Default | Description                                         |
+| ----- | ------- | ------- | --------------------------------------------------- |
+| type  | string  | primary | primary, success, warning, info, danger, text, mtf( |
+| size  | string  | md      | sm, md, lg                                          |
+| round | boolean | false   | true, false                                         |
