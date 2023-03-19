@@ -4,6 +4,11 @@
     <code>title="Your Title"</code>
   </KCard>
 
+  <KCard title="Your Title" :stripe="false">
+    <h5>Props: </h5>
+    <code>title="Your Title" :stripe="false"</code>
+  </KCard>
+
   <KCard title="Your Title" type="success" titleStyle="inside">
     <h5>Props: </h5>
     <code>title="Your Title" type="success" titleStyle="inside"</code>

@@ -3,7 +3,7 @@
     <div class="k-card-title" v-if="props.title && props.titleStyle == 'outside'">
       {{ props.title }}
     </div>
-    <div class="k-card-content">
+    <div :class="classContentString">
       <div :class="'k-card-title-' + props.titleStyle" v-if="props.title && props.titleStyle !== 'outside'">
         {{ props.title }}
       </div>
@@ -36,6 +36,10 @@ const props = defineProps({
   titleStyle: {
     type: String as PropType<string>,
     default: 'outside'
+  },
+  stripe: {
+    type: Boolean as PropType<boolean>,
+    default: true
   }
 });
 
@@ -43,6 +47,11 @@ const classString = classNames(
   `k-card-type-${props.type}`,
   props.bordered ? 'k-card-bordered' : '',
   props.shadow ? 'k-card-shadow' : ''
+);
+
+const classContentString = classNames(
+  'k-card-content',
+  props.stripe ? 'k-card-stripe' : ''
 );
 </script>
 

@@ -1,4 +1,15 @@
-.k-card-content(@color: #4ba3ff) {
+@import '../../assets/style.less';
+
+.k-card-content(@color) {
+  background-color: @color;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.k-card-stripe(@color) {
   @color-dark: lighten(@color, 4%);
   @color-light: lighten(@color, 10%);
 
@@ -10,10 +21,6 @@
       @color-light 75%,
       @color-dark 0);
   background-size: 48px 48px;
-  padding: 12px;
-  border-radius: 10px;
-  color: #fff;
-  transition: all 0.3s;
 }
 
 .k-card-bordered .k-card-content {
@@ -56,17 +63,28 @@
 }
 
 .k-card-type-primary {
+  @color: @k-color-primary;
+
   .k-card-content {
-    .k-card-content();
+    .k-card-content(@color);
   }
 
   .k-card-title {
-    .k-card-title();
+    .k-card-title(@color);
+  }
+
+  .k-card-title-inside {
+    .k-card-title(@color);
+    .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }
 
 .k-card-type-success {
-  @color: #0abb66;
+  @color: @k-color-success;
 
   .k-card-content {
     .k-card-content(@color);
@@ -79,11 +97,15 @@
   .k-card-title-inside {
     .k-card-title(@color);
     .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }
 
 .k-card-type-warning {
-  @color: #e82f2f;
+  @color: @k-color-warning;
 
   .k-card-content {
     .k-card-content(@color);
@@ -96,11 +118,15 @@
   .k-card-title-inside {
     .k-card-title(@color);
     .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }
 
 .k-card-type-info {
-  @color: #ff4b4b;
+  @color: @k-color-info;
 
   .k-card-content {
     .k-card-content(@color);
@@ -113,11 +139,15 @@
   .k-card-title-inside {
     .k-card-title(@color);
     .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }
 
 .k-card-type-danger {
-  @color: #e49100;
+  @color: @k-color-danger;
 
   .k-card-content {
     .k-card-content(@color);
@@ -130,11 +160,15 @@
   .k-card-title-inside {
     .k-card-title(@color);
     .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }
 
 .k-card-type-text {
-  @color: #b1b1b1;
+  @color: @k-color-text;
 
   .k-card-content {
     .k-card-content(@color);
@@ -147,5 +181,9 @@
   .k-card-title-inside {
     .k-card-title(@color);
     .k-card-title-inside();
+  }
+  
+  .k-card-stripe {
+    .k-card-stripe(@color);
   }
 }

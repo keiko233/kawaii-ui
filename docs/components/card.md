@@ -23,3 +23,4 @@ Looks like a text box for a game.
 | shadow     | boolean | true    | true, false                                   |
 | bordered   | boolean | true    | true, false                                   |
 | titleStyle | string  | outside | outside, inside, fill                         |
+| stripe     | boolean | true    | true, false                                   |
