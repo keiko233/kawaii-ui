@@ -8,20 +8,17 @@
   background-color: @color;
   border-radius: 10px;
   color: #fff;
-  border: #ffffffa3 solid 3px;
   box-shadow: 2px 2px 0 #fff4f4;
   transition: all 0.3s;
   text-align: center;
 
   &:hover {
     box-shadow: none;
-    border: #ffffffc7 solid 3px;
     filter: drop-shadow(0 0 8px @color-light-transparent);
   }
 
   &:active {
     transform: scale(0.8);
-    border: @color-light solid 3px;
     filter: drop-shadow(0 0 8px @color-light-transparent-active);
   }
 }
@@ -40,6 +37,20 @@
 
   &:hover {
     background-size: 32px 32px;
+  }
+}
+
+.k-button-bordered(@color) {
+  @color-light: lighten(@color, 10%);
+
+  border: #ffffffa3 solid 3px;
+
+  &:hover {
+    border: #ffffffc7 solid 3px;
+  }
+
+  &:active {
+    border: @color-light solid 3px;
   }
 }
 
@@ -111,4 +122,28 @@
 
 .k-button-stripe-text {
   .k-button-stripe(@k-color-text);
+}
+
+.k-button-bordered-primary {
+  .k-button-bordered(@k-color-primary);
+}
+
+.k-button-bordered-success {
+  .k-button-bordered(@k-color-success);
+}
+
+.k-button-bordered-warning {
+  .k-button-bordered(@k-color-warning);
+}
+
+.k-button-bordered-info {
+  .k-button-bordered(@k-color-info);
+}
+
+.k-button-bordered-danger {
+  .k-button-bordered(@k-color-danger);
+}
+
+.k-button-bordered-text {
+  .k-button-bordered(@k-color-text);
 }

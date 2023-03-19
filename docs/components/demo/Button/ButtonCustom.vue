@@ -1,9 +1,10 @@
 <template>
   <div>
-    <KButton :stripe="false">Primary</KButton>
-    <KButton size="sm">Primary</KButton>
-    <KButton size="md">Primary</KButton>
-    <KButton size="lg">Primary</KButton>
-    <KButton round>Primary</KButton>
+    <KButton :stripe="false">Disable stripe background</KButton>
+    <KButton size="sm">Size sm</KButton>
+    <KButton size="md">Size md</KButton>
+    <KButton size="lg">Size lg</KButton>
+    <KButton round>Round</KButton>
+    <KButton :bordered="false">Disable bordered</KButton>
   </div>
 </template>

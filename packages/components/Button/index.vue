@@ -26,6 +26,10 @@ const props = defineProps({
   stripe: {
     type: Boolean as PropType<boolean>,
     default: true
+  },
+  bordered: {
+    type: Boolean as PropType<boolean>,
+    default: true
   }
 });
 
@@ -33,7 +37,8 @@ const classString = classNames(
   `k-button-type-${props.type}`,
   `k-button-size-${props.size}`,
   props.round ? 'k-button-round' : '',
-  props.stripe ? `k-button-stripe-${props.type}` : ''
+  props.stripe ? `k-button-stripe-${props.type}` : '',
+  props.bordered ? `k-button-bordered-${props.type}` : ''
 );
 </script>
 

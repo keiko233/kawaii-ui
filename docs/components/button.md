@@ -25,8 +25,10 @@ It can be clicked, it can be used, it looks good, and the animation is elegant.
 
 ### Properties
 
-| Name  | Type    | Default | Description                                         |
-| ----- | ------- | ------- | --------------------------------------------------- |
-| type  | string  | primary | primary, success, warning, info, danger, text, mtf( |
-| size  | string  | md      | sm, md, lg                                          |
-| round | boolean | false   | true, false                                         |
+| Name     | Type    | Default | Description                                   |
+| -------- | ------- | ------- | --------------------------------------------- |
+| type     | string  | primary | primary, success, warning, info, danger, text |
+| size     | string  | md      | sm, md, lg                                    |
+| round    | boolean | false   | true, false                                   |
+| stripe   | boolean | true    | true, false                                   |
+| bordered | boolean | true    | true, false                                   |
