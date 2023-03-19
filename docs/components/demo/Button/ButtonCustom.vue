@@ -6,5 +6,6 @@
     <KButton size="lg">Size lg</KButton>
     <KButton round>Round</KButton>
     <KButton :bordered="false">Disable bordered</KButton>
+    <KButton :shadow="false">Disable shadow</KButton>
   </div>
 </template>
