@@ -1,6 +1,6 @@
 <template>
-  <a>
-    <button :class="classString">
+  <a :class="classString">
+    <button :class="classContentString">
       <slot />
     </button>
   </a>
@@ -39,10 +39,14 @@ const props = defineProps({
 
 const classString = classNames(
   `k-button-type-${props.type}`,
+);
+
+const classContentString = classNames(
+  `k-button-content`,
   `k-button-size-${props.size}`,
-  props.round ? 'k-button-round' : '',
-  props.stripe ? `k-button-stripe-${props.type}` : '',
   props.bordered ? `k-button-bordered-${props.type}` : '',
+  props.stripe ? `k-button-stripe` : '',
+  props.round ? 'k-button-round' : '',
   props.shadow ? 'k-button-shadow' : ''
 );
 </script>
