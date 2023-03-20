@@ -7,5 +7,6 @@
     <KButton round>Round</KButton>
     <KButton :bordered="false">Disable bordered</KButton>
     <KButton :shadow="false">Disable shadow</KButton>
+    <KButton :rounded="true">Icon</KButton>
   </div>
 </template>

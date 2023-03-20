@@ -56,6 +56,15 @@
   border-radius: 48px !important;
 }
 
+.k-button-rounded(@value) {
+  .k-button-content {
+    width: @value;
+    height: @value;
+    border-radius: calc(@value / 2) !important;
+    padding: 0;
+  }
+}
+
 .k-button-shadow {
   box-shadow: 2px 2px 0 #fff4f4;
 
@@ -72,6 +81,10 @@
     padding: 12px 18px;
     font-size: 16px;
   }
+
+  &.k-button-rounded {
+    .k-button-rounded(54px);
+  }
 }
 
 .k-button-size-lg {
@@ -82,6 +95,10 @@
     padding: 16px 28px;
     font-size: 18px;
   }
+
+  &.k-button-rounded {
+    .k-button-rounded(54px);
+  }
 }
 
 .k-button-size-sm {
@@ -91,6 +108,10 @@
   .k-button-content {
     padding: 6px 10px;
     font-size: 14px;
+  }
+
+  &.k-button-rounded {
+    .k-button-rounded(54px);
   }
 }
 

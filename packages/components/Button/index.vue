@@ -34,12 +34,17 @@ const props = defineProps({
   shadow: {
     type: Boolean as PropType<boolean>,
     default: true
+  },
+  rounded: {
+    type: Boolean as PropType<boolean>,
+    default: false
   }
 });
 
 const classString = classNames(
   `k-button-type-${props.type}`,
-  `k-button-size-${props.size}`
+  `k-button-size-${props.size}`,
+  props.rounded ? 'k-button-rounded' : ''
 );
 
 const classContentString = classNames(
