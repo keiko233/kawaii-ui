@@ -62,9 +62,7 @@
   border-bottom: #ffffff2e solid 2px;
 }
 
-.k-card-type-primary {
-  @color: @k-color-primary;
-
+.k-card-style(@color) {
   .k-card-content {
     .k-card-content(@color);
   }
@@ -81,109 +79,28 @@
   .k-card-stripe {
     .k-card-stripe(@color);
   }
+}
+
+.k-card-type-primary {
+  .k-card-style(@k-color-primary);
 }
 
 .k-card-type-success {
-  @color: @k-color-success;
-
-  .k-card-content {
-    .k-card-content(@color);
-  }
-
-  .k-card-title {
-    .k-card-title(@color);
-  }
-
-  .k-card-title-inside {
-    .k-card-title(@color);
-    .k-card-title-inside();
-  }
-  
-  .k-card-stripe {
-    .k-card-stripe(@color);
-  }
+  .k-card-style(@k-color-success);
 }
 
 .k-card-type-warning {
-  @color: @k-color-warning;
-
-  .k-card-content {
-    .k-card-content(@color);
-  }
-
-  .k-card-title {
-    .k-card-title(@color);
-  }
-
-  .k-card-title-inside {
-    .k-card-title(@color);
-    .k-card-title-inside();
-  }
-  
-  .k-card-stripe {
-    .k-card-stripe(@color);
-  }
+  .k-card-style(@k-color-warning);
 }
 
 .k-card-type-info {
-  @color: @k-color-info;
-
-  .k-card-content {
-    .k-card-content(@color);
-  }
-
-  .k-card-title {
-    .k-card-title(@color);
-  }
-
-  .k-card-title-inside {
-    .k-card-title(@color);
-    .k-card-title-inside();
-  }
-  
-  .k-card-stripe {
-    .k-card-stripe(@color);
-  }
+  .k-card-style(@k-color-info);
 }
 
 .k-card-type-danger {
-  @color: @k-color-danger;
-
-  .k-card-content {
-    .k-card-content(@color);
-  }
-
-  .k-card-title {
-    .k-card-title(@color);
-  }
-
-  .k-card-title-inside {
-    .k-card-title(@color);
-    .k-card-title-inside();
-  }
-  
-  .k-card-stripe {
-    .k-card-stripe(@color);
-  }
+  .k-card-style(@k-color-danger);
 }
 
 .k-card-type-text {
-  @color: @k-color-text;
-
-  .k-card-content {
-    .k-card-content(@color);
-  }
-
-  .k-card-title {
-    .k-card-title(@color);
-  }
-
-  .k-card-title-inside {
-    .k-card-title(@color);
-    .k-card-title-inside();
-  }
-  
-  .k-card-stripe {
-    .k-card-stripe(@color);
-  }
+  .k-card-style(@k-color-text);
 }
