@@ -39,11 +39,11 @@ const props = defineProps({
 
 const classString = classNames(
   `k-button-type-${props.type}`,
+  `k-button-size-${props.size}`
 );
 
 const classContentString = classNames(
   `k-button-content`,
-  `k-button-size-${props.size}`,
   props.bordered ? `k-button-bordered-${props.type}` : '',
   props.stripe ? `k-button-stripe` : '',
   props.round ? 'k-button-round' : '',
