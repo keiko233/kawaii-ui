@@ -33,3 +33,4 @@ It can be clicked, it can be used, it looks good, and the animation is elegant.
 | stripe   | boolean | true    | true, false                                   |
 | bordered | boolean | true    | true, false                                   |
 | shadow   | boolean | true    | true, false                                   |
+| rounded  | boolean | false   | true, false                                   |
