@@ -1,0 +1,1 @@
+export { default as KTransition} from './index.vue';
