@@ -64,10 +64,12 @@ const classContentString = classNames(
 
 const customHeight = () => {
   if (props.height) return `height: ${props.height};`;
+  else return '';
 }
 
 const customColor = () => {
   if (props.color) return 'background-color:' + props.color;
+  else return '';
 } 
 </script>
 
