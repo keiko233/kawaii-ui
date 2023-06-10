@@ -1,9 +1,9 @@
 <template>
   <div :class="classString">
-    <div class="k-card-title" v-if="props.title && props.titleStyle == 'outside'">
+    <div class="k-card-title" v-if="props.title && props.titleStyle == 'outside'" :style="customColor()">
       {{ props.title }}
     </div>
-    <div :class="classContentString">
+    <div :class="classContentString" :style="customColor()">
       <div :class="'k-card-title-' + props.titleStyle" v-if="props.title && props.titleStyle !== 'outside'">
         {{ props.title }}
       </div>
@@ -40,6 +40,10 @@ const props = defineProps({
   stripe: {
     type: Boolean as PropType<boolean>,
     default: true
+  },
+  color: {
+    type: String as PropType<string>,
+    default: null
   }
 });
 
@@ -53,6 +57,10 @@ const classContentString = classNames(
   'k-card-content',
   props.stripe ? 'k-card-stripe' : ''
 );
+
+const customColor = () => {
+  if (props.color) return 'background-color:' + props.color;
+} 
 </script>
 
 <style scoped lang="less">
