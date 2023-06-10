@@ -1,44 +1,17 @@
 <template>
-  <div class="k-transition-container" :class="classString">
+  <div class="k-transition-container" :class="props.type">
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-const classString = ref();
-
 interface ComponentProps {
   trigger: boolean;
-  type: 'fade';
-  loop: boolean;
+  type: 'fade-out' | 'fade-in';
 };
 
 const props = withDefaults(defineProps<ComponentProps>(), {
-  type: 'fade',
-  loop: true,
-});
-
-function wait(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-watch(() => {
-  return props.trigger;
-}, async () => {
-  // 在prop变化时执行的逻辑
-  if (props.trigger == true) {
-    switch (props.type) {
-      case 'fade':
-        classString.value = 'fade-out';
-        if (props.loop) {
-          setTimeout(() => {
-            classString.value = 'fade-in';
-          }, 1000);
-        };
-        break;
-    }
-  };
+  type: 'fade-out',
 });
 </script>
 

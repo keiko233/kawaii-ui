@@ -1,20 +1,19 @@
 <template>
-  <KTransition :trigger="loading">
-    <KCard>
-      <KButton @Click="trigger">Click trigger transition</KButton>
+  <KTransition :type="type">
+    <KCard title="KTransition">
+      <p>KTransition Template Element</p>
     </KCard>
   </KTransition>
+  <KButton @Click="trigger">Click trigger transition</KButton>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const loading = ref(false);
+const type = ref('fade-in');
 
 const trigger = () => {
-  loading.value = true;
-  setTimeout(() => {
-    loading.value = false;
-  });
+  if (type.value == 'fade-in') type.value = 'fade-out';
+  else type.value = 'fade-in'
 };
 </script>
