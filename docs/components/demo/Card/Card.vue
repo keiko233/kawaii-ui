@@ -19,7 +19,7 @@
     <code>title="Your Title" type="warning" :shadow="false" titleStyle="fill"</code>
   </KCard>
 
-  <KCard :bordered="false" :stripe="false"  color="#ff994b">
+  <KCard :bordered="false" :stripe="false"  color="#ff994b" height="100px">
     <h5>Props: </h5>
     <code>type="info" :bordered="false"</code>
   </KCard>
