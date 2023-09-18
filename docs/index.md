@@ -10,6 +10,9 @@ hero:
     - theme: brand
       text: View Components
       link: /components/button
+    - theme: alt
+      text: GitHub
+      link: https://github.com/keiko233/kawaii-ui
 
 features:
   - title: Color
